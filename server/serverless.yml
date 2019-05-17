@@ -4,6 +4,17 @@ service:
 # Add the serverless-webpack plugin
 plugins:
   - serverless-webpack
+  - serverless-domain-manager
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  customDomain:
+    domainName: one.wdsm.io
+    basePath: api
+    certificateName: '*.wdsm.io'
+    stage: ${self:provider.stage}
+    createRoute53Record: true
+    endpointType: 'regional'
 
 provider:
   name: aws
@@ -11,7 +22,7 @@ provider:
 
 functions:
   hello:
-    handler: controller.home.handler
+    handler: controller/home.handler
     events:
       - http:
           method: get
