@@ -9,4 +9,4 @@ export const handler: APIGatewayProxyHandler = async (event, _context) => {
       input: event,
     }, null, 2),
   };
-}
+};
