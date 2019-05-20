@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://d7bqadl4x7.execute-api.us-east-1.amazonaws.com/dev/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
