@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "lib": [
+      "es2015",
+      "es2015.promise",
       "es2017"
     ],
     "moduleResolution": "node",

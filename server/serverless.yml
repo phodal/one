@@ -22,7 +22,7 @@ provider:
 
 functions:
   hello:
-    handler: controller/home.handler
+    handler: endpoints/home.handler
     events:
       - http:
           method: get
