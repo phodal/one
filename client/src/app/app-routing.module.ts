@@ -5,7 +5,11 @@ const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: '/home'},
   {
     path: 'home',
-    loadChildren: './pages/home/home.module#HomeModule'
+    loadChildren: './presentation/home/home.module#HomeModule'
+  },
+  {
+    path: 'blog',
+    loadChildren: './presentation/blog-post-list/blog-post-list.module#BlogPostListModule'
   }
 ];
 
