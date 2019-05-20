@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "shortid": "^2.2.14",
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {
