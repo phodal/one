@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private getBlogPostsUsecase: GetBlogPostsUsecase) { }
 
   ngOnInit() {
-    this.getBlogPostsUsecase.execute(null).subscribe((blogposts: BlogPostModel[]) => {
+    this.getBlogPostsUsecase.execute().subscribe((blogposts: BlogPostModel[]) => {
       this.blogposts = blogposts;
     })
   }
