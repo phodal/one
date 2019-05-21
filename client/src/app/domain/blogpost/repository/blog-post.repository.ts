@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 import { BlogPostModel } from "../../../../../../domain/blogpost/model/blog-post.model";
+import { AwsResponseModel } from "../../../../../../core/base/aws-response.model";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class BlogPostRepository {
 
   }
 
-  getBlogpost(): Observable<BlogPostModel> {
-    return this.http.get<BlogPostModel>('/api/hello');
+  getBlogpost(): Observable<AwsResponseModel<BlogPostModel[]>> {
+    return this.http.get<AwsResponseModel<BlogPostModel[]>>('/api/hello');
   }
 }
