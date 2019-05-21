@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-    loadChildren: './presentation/blog-post-list/blog-post-list.module#BlogPostListModule'
+    loadChildren: './presentation/blog/blog.module#BlogModule'
   }
 ];
 
