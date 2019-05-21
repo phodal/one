@@ -1,3 +1,18 @@
-<p>
-  create-blog works!
-</p>
+<form [formGroup]="createForm">
+  <label>
+    Title
+    <input type="text" formControlName="title">
+  </label>
+
+  <label>
+    Description
+    <input type="text" formControlName="description">
+  </label
+  >
+  <label>
+    Content
+    <input type="text" formControlName="content">
+  </label>
+
+  <button type="submit" (click)="onSubmit()">Submit</button>
+</form>

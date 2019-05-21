@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-create-blog',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-blog.component.css']
 })
 export class CreateBlogComponent implements OnInit {
+  createForm: FormGroup;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) {
+    this.createForm = this.fb.group({
+      title: [''],
+      description: [''],
+      content: [''],
+    });
+  }
 
   ngOnInit() {
   }
 
+  onSubmit() {
+    console.log(this.createForm.value);
+  }
 }
