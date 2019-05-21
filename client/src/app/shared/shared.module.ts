@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NavBarModule } from './components/navbar/navbar.module';
 import { ThemePickerModule } from './utils/theme-picker';
-import { MatButtonModule } from '@angular/material';
+import { MatButtonModule, MatInputModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -13,10 +13,12 @@ import { MatButtonModule } from '@angular/material';
     RouterModule,
     FormsModule,
     ThemePickerModule,
-    MatButtonModule,
     NavBarModule,
     HttpClientModule,
     ReactiveFormsModule,
+
+    MatButtonModule,
+    MatInputModule,
   ],
   providers: [
   ],
@@ -26,6 +28,9 @@ import { MatButtonModule } from '@angular/material';
     ReactiveFormsModule,
     ThemePickerModule,
     NavBarModule,
+
+    MatButtonModule,
+    MatInputModule,
   ],
   entryComponents: [
   ]

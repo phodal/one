@@ -1,18 +1,18 @@
 <form [formGroup]="createForm">
-  <label>
+  <mat-form-field>
     Title
-    <input type="text" formControlName="title">
-  </label>
+    <input type="text" matInput formControlName="title">
+  </mat-form-field>
 
-  <label>
+  <mat-form-field>
     Description
-    <input type="text" formControlName="description">
-  </label
+    <input type="text" matInput formControlName="description">
+  </mat-form-field
   >
-  <label>
+  <mat-form-field>
     Content
-    <input type="text" formControlName="content">
-  </label>
+    <input type="text" matInput formControlName="content">
+  </mat-form-field>
 
-  <button type="submit" (click)="onSubmit()">Submit</button>
+  <button mat-button type="submit" (click)="onSubmit()">Submit</button>
 </form>
