@@ -18,4 +18,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  constructor() {
+    console.log(this.constructor['ngInjectorDef']);
+    console.log(this.constructor['ngInjectorDef'].imports);
+    let routingModule = this.constructor['ngInjectorDef'].imports[2];
+    console.log(routingModule['ngInjectorDef']);
+  }
 }
