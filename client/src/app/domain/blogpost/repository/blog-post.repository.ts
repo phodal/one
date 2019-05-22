@@ -15,7 +15,13 @@ export class BlogPostRepository {
 
   }
 
-  getBlogpost(): Observable<AwsResponseModel<BlogPostModel[]>> {
+  getBlogposts(): Observable<AwsResponseModel<BlogPostModel[]>> {
     return this.http.get<AwsResponseModel<BlogPostModel[]>>('/api/hello');
+  }
+
+  createBlogpost(params: any) {
+    return this.http.post('/api/blog', {
+      params: params
+    });
   }
 }

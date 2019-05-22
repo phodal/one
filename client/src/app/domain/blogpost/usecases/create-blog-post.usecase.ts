@@ -8,12 +8,12 @@ import { BlogPostModel } from "../../../../../../domain/blogpost/model/blog-post
 @Injectable({
   providedIn: 'root'
 })
-export class GetBlogPostsUsecase {
+export class CreateBlogPostUsecase {
 
   constructor(private repository: BlogPostRepository) {
   }
 
-  execute(): Observable<BlogPostModel[]> {
-    return this.repository.getBlogposts().pipe(pluck('Items'));
+  execute(params: any): Observable<any> {
+    return this.repository.createBlogpost(params);
   }
 }
